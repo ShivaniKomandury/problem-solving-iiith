@@ -1,5 +1,7 @@
 	//replace tabulation by the good number of white spaces
-	EditArea.prototype.replace_tab= function(text){
+
+
+EditArea.prototype.replace_tab= function(text){
 		return text.replace(/((\n?)([^\t\n]*)\t)/gi, editArea.smartTab);		// slower than simple replace...	
 	};
 	
@@ -30,7 +32,7 @@
 	
 	EditArea.prototype.add_style= function(styles){
 		if(styles.length>0){
-			newcss = document.createElement("style");
+			var newcss = document.createElement("style");
 			newcss.type="text/css";
 			newcss.media="all";
 			if(newcss.styleSheet){ // IE
